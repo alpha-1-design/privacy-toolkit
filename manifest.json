@@ -1,0 +1,42 @@
+{
+  "name": "Privacy First Security Toolkit",
+  "short_name": "Privacy Toolkit",
+  "description": "13 privacy-first security tools. Verify links, files, QR codes and messages. No tracking. No data collected.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f14",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "security", "privacy"],
+  "shortcuts": [
+    {
+      "name": "Link Analyzer",
+      "url": "/#link-analyzer",
+      "description": "Analyze suspicious links"
+    },
+    {
+      "name": "Password Generator",
+      "url": "/#password-generator",
+      "description": "Generate secure passwords"
+    },
+    {
+      "name": "JWT Decoder",
+      "url": "/#jwt-decoder",
+      "description": "Decode and inspect JWT tokens"
+    }
+  ]
+}
