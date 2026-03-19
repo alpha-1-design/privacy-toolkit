@@ -4,6 +4,7 @@
  */
 
 import { icon } from '../core/icons.js';
+import { router } from '../core/router.js';
 
 const FAQS = [
   {
@@ -152,6 +153,6 @@ export function renderFAQ(containerId) {
   // Support link
   container.querySelector('[data-route="support"]')?.addEventListener('click', (e) => {
     e.preventDefault();
-    import('../core/router.js').then(({ router }) => router.navigate('support'));
+    router.navigate('support');
   });
 }
