@@ -1,0 +1,65 @@
+{
+  "name": "privacy-first-security-toolkit",
+  "version": "1.0.0",
+  "description": "A free, open source privacy-first security toolkit. Verify links, files, QR codes, and messages without sacrificing privacy.",
+  "keywords": [
+    "security",
+    "privacy",
+    "phishing",
+    "malware",
+    "url-scanner",
+    "qr-code",
+    "password-generator",
+    "jwt-decoder",
+    "hash-generator",
+    "base64",
+    "encryption",
+    "aes",
+    "cybersecurity",
+    "open-source",
+    "offline",
+    "no-tracking"
+  ],
+  "homepage": "https://github.com/your-username/privacy-toolkit",
+  "bugs": {
+    "url": "https://github.com/your-username/privacy-toolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/privacy-toolkit.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "sdk/toolkit.js",
+  "exports": {
+    ".": "./sdk/toolkit.js",
+    "./link-scanner": "./tools/link-analyzer.js",
+    "./scam-detector": "./tools/scam-detector.js",
+    "./hash-generator": "./tools/hash-generator.js",
+    "./jwt-decoder": "./tools/jwt-decoder.js",
+    "./password-generator": "./tools/password-generator.js",
+    "./base64-tool": "./tools/base64-tool.js",
+    "./encryption": "./tools/encryption-tool.js"
+  },
+  "scripts": {
+    "start": "python server.py",
+    "serve": "python server.py"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
+  "author": {
+    "name": "Privacy First Security Toolkit Contributors"
+  },
+  "contributors": [],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/your-username"
+  }
+}

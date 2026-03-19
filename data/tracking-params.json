@@ -1,0 +1,28 @@
+{
+  "params": [
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "utm_id", "utm_source_platform", "utm_creative_format", "utm_marketing_tactic",
+    "fbclid", "gclid", "gclsrc", "dclid", "gbraid", "wbraid",
+    "msclkid", "twclid", "ttclid", "li_fat_id", "mc_cid", "mc_eid",
+    "_ga", "_gl", "mc_cid", "mc_eid", "sc_campaign", "sc_channel",
+    "sc_content", "sc_medium", "sc_outcome", "sc_geo", "sc_country",
+    "igshid", "s_cid", "ncid", "ref", "referral", "source",
+    "affiliate", "aff_id", "partner", "promo", "campaign",
+    "cmpid", "trk", "trkInfo", "clickid", "zanpid", "origin",
+    "mkt_tok", "pk_campaign", "pk_kwd", "piwik_campaign", "piwik_kwd",
+    "yclid", "icid", "spm", "epik", "et_cid", "et_rid",
+    "_hsenc", "_hsmi", "hsCtaTracking", "vero_conv", "vero_id",
+    "wickedid", "rcid", "rb_clickid"
+  ],
+  "categories": {
+    "google": ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "_ga", "_gl"],
+    "facebook": ["fbclid"],
+    "microsoft": ["msclkid"],
+    "twitter": ["twclid"],
+    "tiktok": ["ttclid"],
+    "linkedin": ["li_fat_id"],
+    "mailchimp": ["mc_cid", "mc_eid"],
+    "hubspot": ["_hsenc", "_hsmi", "hsCtaTracking"],
+    "utm": ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id"]
+  }
+}

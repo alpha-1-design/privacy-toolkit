@@ -1,0 +1,14 @@
+{
+  "suspicious": [
+    ".xyz", ".tk", ".ml", ".ga", ".cf", ".gq", ".top", ".click",
+    ".download", ".zip", ".review", ".country", ".stream", ".gdn",
+    ".racing", ".loan", ".date", ".win", ".bid", ".trade",
+    ".accountant", ".science", ".work", ".party", ".men",
+    ".faith", ".webcam", ".cricket", ".link", ".website",
+    ".online", ".site", ".space", ".tech", ".fun", ".live"
+  ],
+  "high_risk": [
+    ".tk", ".ml", ".ga", ".cf", ".gq"
+  ],
+  "notes": "These TLDs are frequently abused in phishing and malware campaigns. Not all sites on these TLDs are malicious."
+}

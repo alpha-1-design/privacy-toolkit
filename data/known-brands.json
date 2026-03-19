@@ -1,0 +1,24 @@
+{
+  "brands": [
+    {"name": "PayPal",    "domain": "paypal.com",    "keywords": ["paypal", "pay-pal", "paypai", "paypa1", "pаypal"]},
+    {"name": "Amazon",    "domain": "amazon.com",    "keywords": ["amazon", "arnazon", "amaz0n", "amazοn", "amazon-support"]},
+    {"name": "Apple",     "domain": "apple.com",     "keywords": ["apple", "appl3", "aррle", "apple-id", "icloud-apple"]},
+    {"name": "Microsoft", "domain": "microsoft.com", "keywords": ["microsoft", "m1crosoft", "microsofft", "micro-soft"]},
+    {"name": "Google",    "domain": "google.com",    "keywords": ["google", "g00gle", "googlе", "googie"]},
+    {"name": "Netflix",   "domain": "netflix.com",   "keywords": ["netflix", "netfl1x", "net-flix", "netfiix"]},
+    {"name": "Facebook",  "domain": "facebook.com",  "keywords": ["facebook", "faceb00k", "face-book", "fаcebook"]},
+    {"name": "Instagram", "domain": "instagram.com", "keywords": ["instagram", "1nstagram", "instagrarn"]},
+    {"name": "Twitter",   "domain": "twitter.com",   "keywords": ["twitter", "tw1tter", "twltter"]},
+    {"name": "Chase",     "domain": "chase.com",     "keywords": ["chase", "chase-bank", "chase-secure"]},
+    {"name": "Wells Fargo","domain": "wellsfargo.com","keywords": ["wellsfargo", "wells-fargo"]},
+    {"name": "Bank of America","domain": "bankofamerica.com","keywords": ["bankofamerica", "bank-of-america", "bofa"]},
+    {"name": "Citibank",  "domain": "citi.com",      "keywords": ["citibank", "citi-bank"]},
+    {"name": "DHL",       "domain": "dhl.com",       "keywords": ["dhl", "dh1", "dhl-delivery"]},
+    {"name": "FedEx",     "domain": "fedex.com",     "keywords": ["fedex", "fed-ex", "fedex-delivery"]},
+    {"name": "UPS",       "domain": "ups.com",       "keywords": ["ups", "ups-delivery", "ups-tracking"]},
+    {"name": "USPS",      "domain": "usps.com",      "keywords": ["usps", "usps-delivery", "usps-tracking"]},
+    {"name": "Steam",     "domain": "steampowered.com","keywords": ["steam", "stearn", "steam-powered"]},
+    {"name": "Coinbase",  "domain": "coinbase.com",  "keywords": ["coinbase", "co1nbase", "coin-base"]},
+    {"name": "Binance",   "domain": "binance.com",   "keywords": ["binance", "b1nance", "binance-support"]}
+  ]
+}

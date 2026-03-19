@@ -1,0 +1,37 @@
+{
+  "urgency_phrases": [
+    "immediately", "urgent", "act now", "within 24 hours", "account suspended",
+    "account will be closed", "verify now", "your account has been compromised",
+    "limited time", "expires today", "last warning", "final notice",
+    "will be terminated", "action required", "respond immediately",
+    "click now", "don't delay", "time sensitive", "before it's too late"
+  ],
+  "authority_impersonation": [
+    "irs", "fbi", "police", "government", "social security", "medicare",
+    "paypal", "amazon", "apple", "microsoft", "google", "bank",
+    "your bank", "tax department", "customs", "interpol", "court",
+    "legal department", "debt collector", "bailiff", "sheriff"
+  ],
+  "payment_keywords": [
+    "send money", "wire transfer", "gift card", "itunes card", "google play card",
+    "bitcoin", "crypto", "payment required", "pay now", "processing fee",
+    "customs fee", "release fee", "activation fee", "verification fee",
+    "bank transfer", "western union", "moneygram", "zelle", "venmo",
+    "send otp", "one time password", "pin number", "security code"
+  ],
+  "phishing_phrases": [
+    "verify your account", "confirm your identity", "update your information",
+    "click the link below", "login to your account", "your password has expired",
+    "suspicious activity", "unusual sign-in", "security alert", "we detected",
+    "account verification required", "confirm your email", "validate your account",
+    "you have won", "claim your prize", "you are selected", "congratulations",
+    "dear customer", "dear user", "dear valued member"
+  ],
+  "categories": {
+    "delivery_scam": ["package", "delivery", "shipment", "courier", "customs", "parcel", "tracking", "dhl", "fedex", "ups", "usps"],
+    "crypto_scam": ["bitcoin", "ethereum", "investment", "trading", "profit", "returns", "crypto", "blockchain", "wallet", "mining"],
+    "romance_scam": ["military", "deployed", "offshore", "widower", "sending money", "stranded", "emergency", "inheritance"],
+    "job_scam": ["work from home", "easy money", "earn daily", "part time", "no experience", "guaranteed income", "job offer"],
+    "lottery_scam": ["winner", "prize", "lottery", "sweepstakes", "selected", "million", "claim", "award"]
+  }
+}

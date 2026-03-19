@@ -1,0 +1,9 @@
+{
+  "name": "phishing-detector",
+  "version": "1.0.0",
+  "type": "LINK_ANALYSIS",
+  "description": "Detects phishing-style domains using keyword analysis and pattern matching",
+  "author": "Privacy First Security Toolkit",
+  "entry": "main.js",
+  "license": "MIT"
+}
