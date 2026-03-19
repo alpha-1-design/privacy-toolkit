@@ -1015,3 +1015,40 @@ textarea.input-field {
   margin-left: 8px;
   letter-spacing: .05em;
 }
+
+/* ── Header mobile fixes ── */
+.header-title-text {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .header-title-text {
+    font-size: 12px;
+  }
+
+  .header-tagline-desktop {
+    display: none;
+  }
+
+  .header-status-desktop {
+    display: none;
+  }
+
+  .version-badge {
+    font-size: 8px;
+    padding: 1px 5px;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  .home-btn-text {
+    display: none;
+  }
+}
