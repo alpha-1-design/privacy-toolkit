@@ -108,3 +108,8 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
+// ── Auto-update: notify page when new version is available ──
+self.addEventListener('message', event => {
+  if (event.data === 'SKIP_WAITING') self.skipWaiting();
+});
