@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="c" width="512" height="512"></canvas>
+<img id="svg" src="icon.svg" style="display:none" onload="convert()"/>
+<script>
+function convert() {
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(document.getElementById('svg'), 0, 0, 512, 512);
+  const a = document.createElement('a');
+  a.download = 'icon-512.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
