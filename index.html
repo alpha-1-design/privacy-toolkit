@@ -272,5 +272,17 @@
     });
   }
 </script>
+  <!-- Alpha Analytics Tracker -->
+  <script>
+  (function(){
+    var SITE_ID = "5602fd10";
+    var API_URL = "https://alpha-analytics-api.onrender.com";
+    if(navigator.doNotTrack==="1")return;
+    function pv(){fetch(API_URL+"/track/pageview",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({site_id:SITE_ID,path:location.pathname,referrer:document.referrer||null}),keepalive:true}).catch(function(){});}
+    pv();
+    var _ps=history.pushState;history.pushState=function(){_ps.apply(this,arguments);pv();};
+    window.addEventListener("popstate",pv);
+  })();
+  </script>
 </body>
 </html>
