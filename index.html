@@ -14,7 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="Privacy Toolkit" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.min.js"></script>
+  <script src="assets/jsQR.min.js"></script>
 </head>
 <body>
 <div id="app">
@@ -33,7 +33,7 @@
       <div>
         <div class="header-title">
           <span class="header-title-text">Privacy First Security Toolkit</span>
-          <span class="version-badge">v1.0.0</span>
+          <span class="version-badge">v1.1.0</span>
         </div>
         <div class="header-tagline header-tagline-desktop">Verify everything &middot; Store nothing &middot; Track nothing</div>
       </div>
@@ -136,12 +136,19 @@
         <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Privacy Guarantee</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:4px;">
           <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; No cookies</li>
-          <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; No analytics</li>
+          <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);"><span id="analyticsClaim">&#10003; No analytics</span></li>
           <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; No accounts</li>
           <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; No tracking</li>
           <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; Local processing</li>
           <li style="font-family:var(--font-mono);font-size:10px;color:var(--safe);">&#10003; Open source</li>
         </ul>
+        <div style="border-top:1px solid var(--border);margin-top:12px;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">Usage Stats</div>
+            <div style="font-size:10.5px;color:var(--text-muted);line-height:1.5;">Anonymous &amp; opt-in. Off by default &mdash; nothing leaves your browser unless you turn it on.</div>
+          </div>
+          <button id="analyticsToggle" class="ana-toggle" role="switch" aria-checked="false" title="Toggle anonymous usage stats">Off</button>
+        </div>
       </div>
     </div>
 
@@ -230,7 +237,8 @@
         <p style="font-size:13px;color:var(--text-secondary);line-height:1.8;margin-bottom:24px;">
           The Privacy First Security Toolkit is a free, open source collection of 13 security tools
           that run entirely in your browser. No data is ever sent to a server. No accounts required.
-          No analytics collected. Every analysis happens on your device.
+          Every analysis happens on your device. Anonymous usage stats are off by default and only
+          run for the current session if you opt in.
         </p>
         <div class="grid-3">
           <div class="stat-card"><span class="stat-value">13</span><span class="stat-label">Tools</span></div>
@@ -272,17 +280,6 @@
     });
   }
 </script>
-  <!-- Alpha Analytics Tracker -->
-  <script>
-  (function(){
-    var SITE_ID = "5602fd10";
-    var API_URL = "https://alpha-analytics-api-production-b795.up.railway.app";
-    if(navigator.doNotTrack==="1")return;
-    function pv(){fetch(API_URL+"/track/pageview",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({site_id:SITE_ID,path:location.pathname,referrer:document.referrer||null}),keepalive:true}).catch(function(){});}
-    pv();
-    var _ps=history.pushState;history.pushState=function(){_ps.apply(this,arguments);pv();};
-    window.addEventListener("popstate",pv);
-  })();
-  </script>
+
 </body>
 </html>

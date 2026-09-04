@@ -1,7 +1,7 @@
 {
   "name": "Privacy First Security Toolkit",
   "short_name": "Privacy Toolkit",
-  "description": "13 privacy-first security tools. Verify links, files, QR codes and messages. No tracking. No data collected.",
+  "description": "13 privacy-first security tools. Verify links, files, QR codes and messages. No accounts, no tracking by default, no data collected.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0f14",

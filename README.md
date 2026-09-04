@@ -25,9 +25,9 @@
 
 *   **Security Analysis:** Advanced link analysis (phishing detection), QR code scanning, and file signature auditing.
 *   **Privacy Guard:** Tracking parameter removal, browser fingerprinting visualization, and secure text encryption.
-*   **Developer Utilities:** JWT decoding, cryptographic hashing, Base64 encoding/decoding, and strong password generation.
+*   **Developer Utilities:** JWT decoding, cryptographic hashing, Base64 encoding/decoding, strong password generation, and realistic test-identity generation.
 *   **Plugin System:** Extensible architecture allowing for custom security detectors and analysis logic.
-*   **Zero-Trust Privacy:** No cookies, no local storage, no analytics, and no cloud processing. Everything happens in browser memory.
+*   **Zero-Trust Privacy:** No cookies, no local storage, no accounts, and no cloud processing. Everything happens in browser memory. Anonymous usage stats are **off by default** and only run for the current session if you opt in.
 
 ---
 
@@ -37,7 +37,7 @@
 | :--- | :--- |
 | **Analysis** | Link Analyzer, QR Scanner, File Analyzer, Scam Detector, Fake Domain Detector |
 | **Privacy** | Tracking Cleaner, Fingerprint Viewer, AES-256-GCM Encryption Tool |
-| **Utilities** | JWT Decoder, Hash Generator (SHA-2/HMAC), Base64 Tool, Password Generator |
+| **Utilities** | JWT Decoder, Hash Generator (SHA-2/HMAC), Base64 Tool, Password Generator, Identity Generator |
 
 ---
 
@@ -48,6 +48,8 @@ The toolkit is built on a **Zero-Cloud Architecture**:
 2.  **Analysis:** Logic executed via pure JavaScript ES Modules or custom Plugins.
 3.  **Cryptography:** Leverages the native **Web Crypto API** for high-performance, secure operations.
 4.  **Result:** Displayed immediately; data is cleared as soon as the tab is closed.
+
+> **One optional exception:** Link Analyzer can check a URL against VirusTotal's 90+ vendors. This runs **only** when you paste your own VirusTotal API key and click the check — the URL is sent to VirusTotal through a small serverless proxy; everything else stays 100% in your browser.
 
 ---
 

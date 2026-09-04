@@ -4,6 +4,7 @@
  */
 
 import { router } from "./core/router.js";
+import { initAnalytics, isAnalyticsEnabled, setAnalyticsEnabled } from "./core/analytics.js";
 import { renderLinkAnalyzer }        from "./tools/link-analyzer.js";
 import { renderPasswordGenerator }   from "./tools/password-generator.js";
 import { renderScamDetector }        from "./tools/scam-detector.js";
@@ -85,14 +86,36 @@ window.showToast = function(message, type = "info", durationMs = 3000) {
   }, durationMs);
 };
 
-// ── Version toast on load ──
-setTimeout(() => {
-  window.showToast(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg> You are on the latest version &mdash; v1.0.0',
-    'success',
-    3000
-  );
-}, 1000);
+// ── Optional usage analytics — opt-in, off by default ──
+initAnalytics();
 
-console.log("%c Privacy First Security Toolkit v1.0.0", "color:#00d4ff;font-size:14px;font-weight:bold;");
+function updateAnalyticsUI() {
+  const on = isAnalyticsEnabled();
+  const toggle = document.getElementById("analyticsToggle");
+  const claim = document.getElementById("analyticsClaim");
+  if (toggle) {
+    toggle.textContent = on ? "On" : "Off";
+    toggle.classList.toggle("active", on);
+    toggle.setAttribute("aria-checked", on ? "true" : "false");
+  }
+  if (claim) {
+    claim.textContent = on ? "\u2713 Analytics: on (you opted in)" : "\u2713 No analytics";
+  }
+}
+
+document.getElementById("analyticsToggle")?.addEventListener("click", () => {
+  const on = !isAnalyticsEnabled();
+  setAnalyticsEnabled(on);
+  updateAnalyticsUI();
+  window.showToast(
+    on
+      ? "Anonymous usage stats enabled for this session \u2014 thanks!"
+      : "Usage stats disabled. Nothing will be sent.",
+    "info"
+  );
+});
+
+updateAnalyticsUI();
+
+console.log("%c Privacy First Security Toolkit v1.1.0", "color:#00d4ff;font-size:14px;font-weight:bold;");
 console.log("%c Verify everything. Store nothing. Track nothing.", "color:#7a95ab;font-size:11px;");

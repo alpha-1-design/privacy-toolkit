@@ -8,7 +8,7 @@
  * - API calls: Never cached (VirusTotal proxy)
  */
 
-const CACHE_NAME = 'privacy-toolkit-v1.0.0';
+const CACHE_NAME = 'privacy-toolkit-v1.1.0';
 
 const STATIC_ASSETS = [
   '/',
@@ -20,6 +20,7 @@ const STATIC_ASSETS = [
   '/core/router.js',
   '/core/utils.js',
   '/core/virustotal.js',
+  '/core/analytics.js',
   '/tools/link-analyzer.js',
   '/tools/password-generator.js',
   '/tools/scam-detector.js',
@@ -40,6 +41,7 @@ const STATIC_ASSETS = [
   '/data/suspicious-tlds.json',
   '/data/tracking-params.json',
   '/sdk/toolkit.js',
+  '/assets/jsQR.min.js',
 ];
 
 // Install — cache all static assets

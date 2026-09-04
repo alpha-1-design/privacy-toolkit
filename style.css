@@ -1052,3 +1052,30 @@ textarea.input-field {
     display: none;
   }
 }
+
+/* Usage-stats opt-in switch (sidebar) */
+.ana-toggle {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  min-width: 52px;
+  transition: all .2s ease;
+}
+.ana-toggle:hover {
+  border-color: #00d4ff;
+  color: var(--text);
+}
+.ana-toggle.active {
+  background: rgba(0, 212, 255, .12);
+  border-color: #00d4ff;
+  color: #00d4ff;
+}

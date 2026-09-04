@@ -313,7 +313,7 @@ export function renderLinkAnalyzer(containerId) {
       </div>
 
       <p style="font-size:12px; color:var(--text-muted); margin-bottom:var(--space-md); line-height:1.6;">
-        Add your free VirusTotal key to check every URL against 90+ security vendors.
+        Add your free VirusTotal key to check every URL against 90+ security vendors. Your URL is sent to VirusTotal only when you run this check &mdash; nothing else leaves your browser.
         Key is <strong style="color:var(--text-primary);">never stored</strong> — cleared when you close this tab.
       </p>
 
