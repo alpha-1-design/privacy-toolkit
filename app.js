@@ -18,6 +18,10 @@ import { renderIdentityGenerator }   from "./tools/identity-generator.js";
 import { renderJWTDecoder }          from "./tools/jwt-decoder.js";
 import { renderHashGenerator }       from "./tools/hash-generator.js";
 import { renderBase64Tool }          from "./tools/base64-tool.js";
+import { renderRequestMap }          from "./tools/request-map.js";
+import { renderBreachChecker }       from "./tools/breach-checker.js";
+import { renderEmailAnalyzer }       from "./tools/email-analyzer.js";
+import { renderPIIRedactor }         from "./tools/pii-redactor.js";
 import { renderFAQ }                from "./tools/faq.js";
 import { renderSupport }            from "./tools/support.js";
 
@@ -27,9 +31,13 @@ const TOOLS = {
   "file-analyzer":      () => renderFileAnalyzer("view-file-analyzer"),
   "scam-detector":      () => renderScamDetector("view-scam-detector"),
   "fake-domain":        () => renderFakeDomainDetector("view-fake-domain"),
+  "email-analyzer":     () => renderEmailAnalyzer("view-email-analyzer"),
+  "breach-checker":     () => renderBreachChecker("view-breach-checker"),
   "tracking-cleaner":   () => renderTrackingCleaner("view-tracking-cleaner"),
   "fingerprint-viewer": () => renderFingerprintViewer("view-fingerprint-viewer"),
   "encryption-tool":    () => renderEncryptionTool("view-encryption-tool"),
+  "request-map":        () => renderRequestMap("view-request-map"),
+  "pii-redactor":       () => renderPIIRedactor("view-pii-redactor"),
   "password-generator": () => renderPasswordGenerator("view-password-generator"),
   "identity-generator": () => renderIdentityGenerator("view-identity-generator"),
   "jwt-decoder":        () => renderJWTDecoder("view-jwt-decoder"),
@@ -117,5 +125,20 @@ document.getElementById("analyticsToggle")?.addEventListener("click", () => {
 
 updateAnalyticsUI();
 
-console.log("%c Privacy First Security Toolkit v1.1.0", "color:#00d4ff;font-size:14px;font-weight:bold;");
+// ── Update notification — the service worker broadcasts the deployed version ──
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', event => {
+    if (event.data && event.data.type === 'APP_VERSION') {
+      try {
+        const seen = sessionStorage.getItem('ptk_version');
+        if (seen && seen !== event.data.version) {
+          window.showToast(`Toolkit updated to v${event.data.version} \u2014 refresh for the latest`, 'info', 6000);
+        }
+        sessionStorage.setItem('ptk_version', event.data.version);
+      } catch (err) { /* ignore */ }
+    }
+  });
+}
+
+console.log("%c Privacy First Security Toolkit v1.2.0", "color:#00d4ff;font-size:14px;font-weight:bold;");
 console.log("%c Verify everything. Store nothing. Track nothing.", "color:#7a95ab;font-size:11px;");

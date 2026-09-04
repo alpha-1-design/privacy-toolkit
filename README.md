@@ -35,9 +35,9 @@
 
 | Category | Tools Included |
 | :--- | :--- |
-| **Analysis** | Link Analyzer, QR Scanner, File Analyzer, Scam Detector, Fake Domain Detector |
-| **Privacy** | Tracking Cleaner, Fingerprint Viewer, AES-256-GCM Encryption Tool |
-| **Utilities** | JWT Decoder, Hash Generator (SHA-2/HMAC), Base64 Tool, Password Generator, Identity Generator |
+| **Analysis** | Link Analyzer, QR Scanner, File Analyzer, Scam Detector, Fake Domain Detector, Email Header Analyzer |
+| **Privacy** | Tracking Cleaner, Fingerprint Viewer, AES-256-GCM Encryption Tool, Request Map, PII Redactor |
+| **Utilities** | JWT Decoder, Hash Generator (SHA-2/HMAC), Base64 Tool, Password Generator, Identity Generator, Breach Checker |
 
 ---
 

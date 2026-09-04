@@ -8,7 +8,8 @@
  * - API calls: Never cached (VirusTotal proxy)
  */
 
-const CACHE_NAME = 'privacy-toolkit-v1.1.0';
+const CACHE_NAME = 'privacy-toolkit-v1.2.0';
+const APP_VERSION = '1.2.0';
 
 const STATIC_ASSETS = [
   '/',
@@ -29,6 +30,10 @@ const STATIC_ASSETS = [
   '/tools/file-analyzer.js',
   '/tools/encryption-tool.js',
   '/tools/fake-domain-detector.js',
+  '/tools/email-analyzer.js',
+  '/tools/breach-checker.js',
+  '/tools/request-map.js',
+  '/tools/pii-redactor.js',
   '/tools/qr-scanner.js',
   '/tools/identity-generator.js',
   '/tools/jwt-decoder.js',
@@ -63,6 +68,11 @@ self.addEventListener('activate', event => {
           .map(key => caches.delete(key))
       )
     ).then(() => self.clients.claim())
+      .then(() => {
+        self.clients.matchAll({ type: 'window' }).then(clients =>
+          clients.forEach(client => client.postMessage({ type: 'APP_VERSION', version: APP_VERSION }))
+        );
+      })
   );
 });
 
